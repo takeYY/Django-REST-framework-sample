@@ -34,4 +34,5 @@ docker-compose up
 
 - [x] https://www.django-rest-framework.org/tutorial/1-serialization/
 - [x] https://www.django-rest-framework.org/tutorial/2-requests-and-responses/
-- [ ] https://www.django-rest-framework.org/tutorial/3-class-based-views/
+- [x] https://www.django-rest-framework.org/tutorial/3-class-based-views/
+- [ ] https://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/

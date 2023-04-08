@@ -4,6 +4,14 @@
 # 標準ライブラリ
 import os
 import sys
+from os.path import dirname, join
+
+# 外部ライブラリ
+from dotenv import load_dotenv
+
+load_dotenv(verbose=True)
+dotenv_path = join(dirname(__file__), ".env")
+load_dotenv(dotenv_path)
 
 
 def main():

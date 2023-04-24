@@ -21,7 +21,7 @@ from django.urls import include, path
 from rest_framework import routers
 
 # 独自ライブラリ
-from src.quickstart import views
+from apps.quickstart import views
 
 router = routers.DefaultRouter()
 router.register(r"users", views.UserViewSet)
@@ -31,5 +31,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
-    path("", include("snippets.urls")),
+    path("", include("apps.snippets.urls")),
 ]

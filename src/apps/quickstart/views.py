@@ -1,10 +1,9 @@
 # 外部ライブラリ
 from django.contrib.auth.models import Group, User
-from django.shortcuts import render
 from rest_framework import permissions, viewsets
 
 # 独自ライブラリ
-from src.quickstart.serializers import GroupSerializer, UserSerializer
+from apps.quickstart.serializers import GroupSerializer, UserSerializer
 
 
 # Create your views here.

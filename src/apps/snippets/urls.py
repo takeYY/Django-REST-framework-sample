@@ -3,7 +3,7 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 # 独自ライブラリ
-from snippets.views import SnippetViewSet, UserViewSet
+from apps.snippets.views import SnippetViewSet, UserViewSet
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()

@@ -1,9 +1,9 @@
+# 独自ライブラリ
+from apps.snippets.serializers import UserSerializer
+
 # 外部ライブラリ
 from django.contrib.auth.models import User
 from rest_framework.viewsets import ReadOnlyModelViewSet
-
-# 独自ライブラリ
-from snippets.serializers import UserSerializer
 
 
 class UserViewSet(ReadOnlyModelViewSet):

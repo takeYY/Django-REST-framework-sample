@@ -8,7 +8,7 @@ from rest_framework.serializers import (
 )
 
 # 独自ライブラリ
-from snippets.models import Snippet
+from apps.snippets.models import Snippet
 
 
 class SnippetSerializer(HyperlinkedModelSerializer):

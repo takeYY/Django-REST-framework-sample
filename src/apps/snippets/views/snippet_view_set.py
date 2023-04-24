@@ -1,14 +1,14 @@
+# 独自ライブラリ
+from apps.snippets.models import Snippet
+from apps.snippets.permissions import IsOwnerOrReadOnly
+from apps.snippets.serializers import SnippetSerializer
+
 # 外部ライブラリ
 from rest_framework import permissions
 from rest_framework.decorators import action
 from rest_framework.renderers import StaticHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-
-# 独自ライブラリ
-from snippets.models import Snippet
-from snippets.permissions import IsOwnerOrReadOnly
-from snippets.serializers import SnippetSerializer
 
 
 class SnippetViewSet(ModelViewSet):

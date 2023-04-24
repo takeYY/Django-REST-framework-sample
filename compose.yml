@@ -13,7 +13,7 @@ services:
     container_name: sample_django_rest_container
     env_file: ./.env
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: python3 src/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
     ports:

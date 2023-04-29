@@ -15,6 +15,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
+# 外部ライブラリ
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -81,14 +84,13 @@ WSGI_APPLICATION = "config.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ["POSTGRES_DB"],
-        "USER": os.environ["POSTGRES_USER"],
-        "PASSWORD": os.environ["POSTGRES_PASSWORD"],
-        "HOST": "postgres_db",
-        "PORT": 5432,
-    }
+    "default": dj_database_url.parse(os.environ["DB_URL"]),
+    "read_only": dj_database_url.parse(
+        os.environ.get(
+            "DB_URL_FOR_READ_ONLY",
+            os.environ["DB_URL"],
+        )
+    ),
 }
 
 

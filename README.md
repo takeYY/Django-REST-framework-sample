@@ -15,19 +15,19 @@ docker-compose up
 1. 起動中にコンテナに入る
 
    ```bash
-   docker exec -it sample_django_rest_container bash
+   docker exec -it drf_sample_api bash
    ```
 
 2. マイグレファイル作成
 
    ```bash
-   python manage.py makemigrations
+   python src/manage.py makemigrations
    ```
 
 3. DB に反映
 
    ```bash
-   python manage.py migrate
+   python src/manage.py migrate
    ```
 
 ## チュートリアル
